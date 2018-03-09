@@ -7,30 +7,30 @@ import java.util.List;
 
 public class Author extends Person {
 
-    private List books;
+    //Changed the list declaration of books to type of String
+    private List<String> books;
 
 
     public Author(String firstName, String lastName) {
         super(firstName, lastName);
-        books = new ArrayList();
+        //Added array list type (implicit)
+        books = new ArrayList<>();
     }
 
     /**
      * @deprecated Use publishedBooks instead
      */
-    @SuppressWarnings("unchecked")
     @Deprecated
     public List<String> getBooks() {
         return books;
     }
 
-    @SuppressWarnings("unchecked")
-    public List<String> publishedBooks() {
 
+    public List<String> publishedBooks() {
         return books;
     }
 
-    @SuppressWarnings("unchecked")
+
     public void addBook(String book) {
         books.add(book);
     }
